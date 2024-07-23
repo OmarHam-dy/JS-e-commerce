@@ -3,4 +3,4 @@
 <br>
 <br>
 
-![screenshot](https://raw.githubusercontent.com/OmarHam-dy/JS-e-commerce/main/screenshots/ecommerceJS.png)
+![screenshot](https://raw.githubusercontent.com/OmarHam-dy/JS-e-commerce/main/ecommerceJS.png)

@@ -19,7 +19,6 @@ const openCart = function () {
   elementCart.classList.add('end-0');
 };
 const closeCart = function () {
-  console.log('hey!');
   elementCart.classList.add('right-ng-100');
   elementCart.classList.remove('end-0');
 };
@@ -69,10 +68,13 @@ updateCartUI();
 
 // add To cart
 productsContainer.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  const buttonAdd = e.target.closest('.btn-add');
+
+  if (!buttonAdd) return;
+
   const elementCard = e.target.closest('.card');
-
-  if (!elementCard) return;
-
   const id = elementCard.dataset.id;
 
   if (cart.some(product => product.id == id)) return;
@@ -132,6 +134,8 @@ cartContainer.addEventListener('click', function (e) {
   const buttonDecrease = e.target.closest('.btn-decrease');
   if (buttonDecrease) decreaseCartProduct(id);
 });
+
+/////////////////////////////////////////////////////////////////////////////
 // products
 
 const displayProducts = function (products) {
@@ -149,7 +153,7 @@ const displayProducts = function (products) {
             <div class="parent d-flex justify-content-between">
               <div class="price fw-bold0-
               ">${product.price.toFixed(2)}$</div>
-              <a href="#" class="btn btn-primary add">Add to cart</a>
+              <a href="#" class="btn btn-primary btn-add">Add to cart</a>
             </div>
           </div>
         </div>
@@ -163,10 +167,10 @@ const getProducts = function (url) {
     .then(res => res.json())
     .then(data => displayProducts(data.products));
 };
+getProducts('https://dummyjson.com/products');
 
 // categorise
 const displayCategores = function (categories) {
-  console.log(categories);
   categories.map(category => {
     const html = `<li class="cate make-pointer my-2" data-url="${category.url}">${category.name}</li>`;
     categoriesContainer.insertAdjacentHTML('beforeend', html);
@@ -184,7 +188,3 @@ categoriesContainer.addEventListener('click', function (e) {
     getProducts(e.target.closest('.cate').dataset.url);
   }
 });
-
-// fetch('https://dummyjson.com/products')
-//   .then(res => res.json())
-//   .then(data => console.log(data));
