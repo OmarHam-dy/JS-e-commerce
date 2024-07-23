@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>E-commerce</title>
+  </head>
+  <body>
+    <nav class="py-3 px-5 fs-3 position-relative z-2 shadow">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="name text-dark">E-commerce</div>
+        <div class="search-field w-75 rounded-pill">
+          <input
+            type="text"
+            class="form-control rounded-pill bg-transparent"
+            id="search"
+            placeholder="Search on Product..."
+          />
+        </div>
+        <div class="icon make-pointer position-relative">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="cart position-fixed right-ng-100 top-0 vh-100 border-start bg-light p-2 pt-5 z-3"
+    >
+      <span class="position-absolute fs-3 text-dark top-0 start-0 make-pointer">
+        ✖
+      </span>
+      <ul class="list-unstyled"></ul>
+    </div>
+
+    <main class="my-5">
+      <div class="container d-flex">
+        <ul class="list-unstyled p-1 me-5 border rounded-1 w-25 overflow-auto">
+          <li class="fs-2 mb-2">Categories:</li>
+        </ul>
+
+        <div class="row w-75"></div>
+      </div>
+    </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

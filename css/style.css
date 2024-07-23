@@ -1,0 +1,73 @@
+nav .icon {
+  --display-counter: block;
+}
+nav .icon::before {
+  content: attr(data-length);
+  position: absolute;
+  display: var(--display-counter);
+  right: -5px;
+  top: -5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: rgb(3, 92, 194);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.cart {
+  transition-duration: 1s;
+  min-width: 350px;
+}
+
+.cart li {
+  min-height: 80px;
+  padding-right: 30px;
+}
+.cart li .btn-delete {
+  top: 2px;
+  left: 2px;
+}
+.cart li .btn-increase {
+  right: 2px;
+  bottom: 50%;
+}
+.cart li .btn-decrease {
+  right: 2px;
+  top: 50%;
+}
+
+.cart li .image {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+.cart li .image img {
+}
+.cart li .info {
+}
+.cart li .info .title {
+}
+.cart li .info .total-price {
+}
+.cart li .info .total-price .amount {
+}
+.cart li .info .total-price .price {
+}
+.cart li .info .total-price .result {
+}
+.right-ng-100 {
+  right: -100% !important;
+}
+
+main ul {
+  height: 500px;
+}
+
+main .card img {
+  height: 18rem;
+}
+
+.make-pointer {
+  cursor: pointer;
+}
